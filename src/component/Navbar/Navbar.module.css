@@ -1,0 +1,47 @@
+nav {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.8rem 2rem;
+    background-color: #131313;
+    border-radius: 5px;
+}
+
+.icon {
+    border: #687EFF 2px solid;
+    padding: 0.2rem;
+    border-radius: 50%;
+}
+
+.icon svg {
+    color: #949CB0;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.list_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    list-style: none;
+    margin-left: 2rem;
+}
+
+.item a {
+    color: #949CB0;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 630px) {
+    .list_items {
+        display: none;
+    }
+}

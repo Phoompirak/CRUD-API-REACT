@@ -1,0 +1,125 @@
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+
+    & .bg_black {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .4);
+        animation: fade .5s;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        & .modal {
+            display: flex;
+            flex-flow: column wrap;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            width: 478px;
+            height: 284px;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            background-color: aliceblue;
+            box-shadow: 5px 5px 10px gray;
+            animation: pop .5s;
+
+            & .correct {
+                /* border-top: #a5dda1 4px solid;
+                border-bottom: #a5dda1 4px solid; */
+                border-radius: 100%;
+                transition: box-shadow .3s ease-in;
+                animation: spin .4s linear;
+
+                & svg {
+                    width: 70px;
+                    height: 70px;
+                    color: #58b451;
+                    transition: opacity .3s ease-in-out;
+                    animation: fade 2.5s;
+                }
+            }
+
+            & .show_data {
+                & h3 {
+                    font-weight: 500;
+                    color: rgba(0, 0, 0, .6);
+                }
+            }
+
+            & .btn_ok {
+
+                /* align-self: flex-end; */
+                & button {
+                    border: none;
+                    border-radius: 3px;
+                    color: aliceblue;
+                    background-color: #03a7f3;
+                    padding: .5rem 1.2rem;
+                    transition: transform .3s ease-out;
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(43, 114, 165, .29);
+                    }
+
+                    &:active {
+                        transform: scale(.85);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

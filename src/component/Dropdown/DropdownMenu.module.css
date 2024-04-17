@@ -1,0 +1,20 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    & .dropdown_toggle {
+      background-color: #f8f9fa;
+      border: none;
+      padding: 6px 12px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      color: #949CB0;
+      border: #949494 2px solid;
+      
+      &:focus {
+        color: #000;
+        border: #000 2px solid;
+      }
+    }
+  }
